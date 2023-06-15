@@ -1,0 +1,33 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "MonoRepo-Android"
+include ':app'
+
+// base
+include ':base:arch'
+include ':base:network'
+
+//data
+include ':data:auth'
+
+// feature
+include ':feature:camera'
+
+// business line
+//include ':business:smartuser'
+//include ':business:smartscreen'
+
+// 遍历business目录，include business moudles
+apply from: './business_include.gradle'

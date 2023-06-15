@@ -1,0 +1,6 @@
+[submodule "business/smartscreen"]
+	path = business/smartscreen
+	url = git@github.com:gqb/smartscreen.git
+[submodule "business/smartuser"]
+	path = business/smartuser
+	url = git@github.com:gqb/smartuser.git
